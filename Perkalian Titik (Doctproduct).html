@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to Irma Notebook &#8212; My sample book</title>
+    <title>Perkalian Titik (Doctproduct) &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Perkalian Titik (Doctproduct)';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sistem Persamaan Linear" href="Sistem%20Persamaan%20Linear2.html" />
+    <link rel="prev" title="1. Apa itu Eigenvalue dan Eigenvector?" href="Tugas%20Materi%20Eigenvalue%20dan%20Eigenvector.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,13 +174,13 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Irma Notebook
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Sistem%20Persamaan%20Linear2.html"><strong>Sistem Persamaan Linear</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Eliminasi%20Gauss2.html"><strong>Eliminasi Gauss</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%203%20Persamaan%20dengan%203%20var.html"><strong>Tugas 3 Persamaan 3 Variabel dengan hasil 1,0,0</strong></a></li>
@@ -194,7 +192,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Transformasi%20Linear.html">Tugas Transformasi Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Materi%20Eigenvalue%20dan%20Eigenvector.html">1. Apa itu Eigenvalue dan Eigenvector?</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Perkalian%20Titik%20%28Doctproduct%29.html">Perkalian Titik (Doctproduct)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Perkalian Titik (Doctproduct)</a></li>
 </ul>
 
     </div>
@@ -266,7 +264,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPerkalian Titik (Doctproduct).html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +294,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Perkalian Titik (Doctproduct).md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +365,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -378,11 +378,37 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Irma Notebook</h1>
+    <h1>Perkalian Titik (Doctproduct)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product-orthogonal-dan-ortonormal">Dot Product, Orthogonal, dan Ortonormal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-dot-product-perkalian-titik">Pengertian Dot Product (Perkalian Titik)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-utama">Fungsi utama:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-penting">Sifat penting:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-ortonormal">Pengertian Ortonormal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Definisi:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-5-contoh-vektor-3d-dan-dot-product-nya">BAGIAN 5: Contoh Vektor 3D dan Dot Product-nya</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-vektor">Contoh vektor:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#panjang-mathbf-v">Panjang <span class="math notranslate nohighlight">\((\mathbf{v})\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">Dot Product:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inti-materinya">Inti Materinya:</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -392,26 +418,120 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-irma-notebook">
-<h1>Welcome to Irma Notebook<a class="headerlink" href="#welcome-to-irma-notebook" title="Link to this heading">#</a></h1>
-<p>Halo, selamat datang di WEB saya, di WEB ini menampilkan beberapa materi KAL
-Enjoy in my web!</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Sistem%20Persamaan%20Linear2.html"><strong>Sistem Persamaan Linear</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Eliminasi%20Gauss2.html"><strong>Eliminasi Gauss</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%203%20Persamaan%20dengan%203%20var.html"><strong>Tugas 3 Persamaan 3 Variabel dengan hasil 1,0,0</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Transformasi%20Matrikss.html"><strong>Transformasi Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Transformasi%20Matrikss.html#contoh-transformasi-matriks">Contoh Transformasi Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Transformasi%20Matrikss.html#komposisi-transformasi">Komposisi Transformasi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Transformasi%20Matrikss.html#matriks-identitas-dan-transformasi-identitas">Matriks Identitas dan Transformasi Identitas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Transformasi%20Matriks2.html">TUGAS TRANSFORMASI MATRIKS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Transformasi%20Linear.html">Tugas Transformasi Linear</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Materi%20Eigenvalue%20dan%20Eigenvector.html">1. Apa itu Eigenvalue dan Eigenvector?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Materi%20Eigenvalue%20dan%20Eigenvector.html#apa-itu-ortogonal-dan-ortonormal">2. Apa itu Ortogonal dan Ortonormal?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Perkalian%20Titik%20%28Doctproduct%29.html">Perkalian Titik (Doctproduct)</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="perkalian-titik-doctproduct">
+<h1>Perkalian Titik (Doctproduct)<a class="headerlink" href="#perkalian-titik-doctproduct" title="Link to this heading">#</a></h1>
+<section id="dot-product-orthogonal-dan-ortonormal">
+<h2>Dot Product, Orthogonal, dan Ortonormal<a class="headerlink" href="#dot-product-orthogonal-dan-ortonormal" title="Link to this heading">#</a></h2>
+</section>
+<hr class="docutils" />
+<section id="pengertian-dot-product-perkalian-titik">
+<h2>Pengertian Dot Product (Perkalian Titik)<a class="headerlink" href="#pengertian-dot-product-perkalian-titik" title="Link to this heading">#</a></h2>
+<section id="definisi">
+<h3>Definisi:<a class="headerlink" href="#definisi" title="Link to this heading">#</a></h3>
+<p>Dot product (atau <strong>perkalian skalar</strong>) adalah operasi antara dua vektor yang menghasilkan <strong>angka (skalar)</strong>, bukan vektor.</p>
+<p>Jika:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{u} = (u_1, u_2), \quad \mathbf{v} = (v_1, v_2)\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2\]</div>
+</section>
+<hr class="docutils" />
+<section id="fungsi-utama">
+<h3>Fungsi utama:<a class="headerlink" href="#fungsi-utama" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Menentukan apakah dua vektor <strong>tegak lurus (orthogonal)</strong>.</p></li>
+<li><p>Menghitung <strong>sudut</strong> antara dua vektor.</p></li>
+<li><p>Dipakai dalam banyak aplikasi: fisika, grafik komputer, machine learning, dll.</p></li>
 </ul>
+</section>
+<hr class="docutils" />
+<section id="sifat-penting">
+<h3>Sifat penting:<a class="headerlink" href="#sifat-penting" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Kalau <span class="math notranslate nohighlight">\((\mathbf{u} \cdot \mathbf{v} = 0)\)</span>, berarti <strong>vektor saling tegak lurus</strong> (orthogonal).</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pengertian-ortonormal">
+<h2>Pengertian Ortonormal<a class="headerlink" href="#pengertian-ortonormal" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Definisi:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Sebuah himpunan vektor dikatakan <strong>ortonormal</strong> jika:</p>
+<ol class="arabic simple">
+<li><p><strong>Orthogonal</strong>: Semua vektor saling tegak lurus<br />
+(dot product = 0 antar vektor berbeda).</p></li>
+<li><p><strong>Normalized</strong>: Setiap vektor punya panjang (norma) = 1.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="contoh">
+<h3>Contoh:<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h3>
+<p>Di ruang 2D, dua vektor berikut adalah ortonormal:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}_1 = (1, 0), \quad \mathbf{e}_2 = (0, 1)\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\mathbf{e}_1 \cdot \mathbf{e}_2 = 0 \Rightarrow\)\)</span> orthogonal</p></li>
+<li><p><span class="math notranslate nohighlight">\((|\mathbf{e}_1| = \sqrt{1^2 + 0^2} = 1\)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((|\mathbf{e}_2| = \sqrt{0^2 + 1^2} = 1\)\)</span></p></li>
+</ul>
+<p>Maka: <strong>ortonormal!</strong></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bagian-5-contoh-vektor-3d-dan-dot-product-nya">
+<h2>BAGIAN 5: Contoh Vektor 3D dan Dot Product-nya<a class="headerlink" href="#bagian-5-contoh-vektor-3d-dan-dot-product-nya" title="Link to this heading">#</a></h2>
+<section id="contoh-vektor">
+<h3>Contoh vektor:<a class="headerlink" href="#contoh-vektor" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{u} = (2, 1), \quad \mathbf{v} = (-2, 4)
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="panjang-mathbf-v">
+<h3>Panjang <span class="math notranslate nohighlight">\((\mathbf{v})\)</span>:<a class="headerlink" href="#panjang-mathbf-v" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{v} = \sqrt{(-2)^2 + 4^2} = \sqrt{4 + 16} = \sqrt{20}
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="dot-product">
+<h3>Dot Product:<a class="headerlink" href="#dot-product" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{u} \cdot \mathbf{v} = 2 \cdot (-2) + 1 \cdot 4 = -4 + 4 = 0\]</div>
+<p>Lagi-lagi: <strong>orthogonal!</strong></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="inti-materinya">
+<h2>Inti Materinya:<a class="headerlink" href="#inti-materinya" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Konsep</strong></p></th>
+<th class="head"><p><strong>Penjelasan</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Basis</strong></p></td>
+<td><p>Vektor-vektor pembentuk ruang</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Orthonormal</strong></p></td>
+<td><p>Vektor yang saling tegak lurus dan panjangnya 1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Dot product = 0</strong></p></td>
+<td><p>Vektor saling tegak lurus</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Norma vektor</strong></p></td>
+<td><p>Panjang vektor, rumus: $<span class="math notranslate nohighlight">\(\sqrt{x^2 + y^2}\)</span>$</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -444,14 +564,14 @@ Enjoy in my web!</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Sistem%20Persamaan%20Linear2.html"
-       title="next page">
+    <a class="left-prev"
+       href="Tugas%20Materi%20Eigenvalue%20dan%20Eigenvector.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Sistem Persamaan Linear</strong></p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1. Apa itu Eigenvalue dan Eigenvector?</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -459,6 +579,39 @@ Enjoy in my web!</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product-orthogonal-dan-ortonormal">Dot Product, Orthogonal, dan Ortonormal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-dot-product-perkalian-titik">Pengertian Dot Product (Perkalian Titik)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-utama">Fungsi utama:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-penting">Sifat penting:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-ortonormal">Pengertian Ortonormal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Definisi:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-5-contoh-vektor-3d-dan-dot-product-nya">BAGIAN 5: Contoh Vektor 3D dan Dot Product-nya</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-vektor">Contoh vektor:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#panjang-mathbf-v">Panjang <span class="math notranslate nohighlight">\((\mathbf{v})\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">Dot Product:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inti-materinya">Inti Materinya:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
